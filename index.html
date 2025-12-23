@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Journey | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6d28d9; --bg: #ffffff; --text: #1f2937; --card: #f3f4f6;
+        }
+        [data-theme="dark"] {
+            --primary: #a78bfa; --bg: #0f172a; --text: #f8fafc; --card: #1e293b;
+        }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); margin: 0; transition: 0.3s; line-height: 1.6; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; position: fixed; width: 90%; top: 0; z-index: 1000; backdrop-filter: blur(10px); }
+        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(rgba(109,40,217,0.7), rgba(15,23,42,0.8)), url('assets/defence.jpg'); background-size: cover; color: white; padding: 0 10%; }
+        .hero img.header-img { max-width: 80%; height: auto; margin-bottom: 20px; }
+        .section { padding: 80px 10%; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+        .card { background: var(--card); padding: 30px; border-radius: 20px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); transition: 0.3s; }
+        .card:hover { transform: translateY(-10px); }
+        .terminal { background: #1a1a1a; color: #4ade80; font-family: 'Courier New', monospace; padding: 20px; border-radius: 10px; border-left: 5px solid var(--primary); }
+        .skill-bar { height: 10px; background: #ddd; border-radius: 5px; margin: 10px 0 20px; overflow: hidden; }
+        .skill-fill { height: 100%; background: var(--primary); transition: 1s; }
+        .achievements { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .cert { border: 1px solid var(--primary); padding: 15px; text-align: center; border-radius: 12px; font-weight: bold; }
+        .theme-btn { cursor: pointer; background: var(--primary); color: white; border: none; padding: 10px 20px; border-radius: 25px; }
+        .qr-section { text-align: center; background: var(--card); padding: 40px; border-radius: 20px; }
+        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body data-theme="light">
+    <nav>
+        <img src="assets/logo.png" alt="Logo" style="height: 50px;">
+        <button class="theme-btn" onclick="toggleTheme()">Toggle Mode</button>
+    </nav>
+
+    <header class="hero">
+        <img src="assets/programname.png" alt="Program Name" class="header-img" data-aos="fade-down">
+        <h1 data-aos="fade-up">“Awareness of cyber threats is the key to preventing cybersecurity attacks”</h1>
+    </header>
+
+    <section class="section">
+        <h2 style="text-align: center; font-size: 2.5rem;">Who Am I?</h2>
+        <div class="grid">
+            <div class="card" data-aos="fade-right">
+                <h3 style="color: var(--primary);">Beginning (2004)</h3>
+                <p>Started in computer science as a fresh graduate. Driven by curiosity to understand how systems work and how to build a strong technical foundation through real-world challenges.</p>
+            </div>
+            <div class="card" data-aos="fade-left">
+                <h3 style="color: var(--primary);">Today (Leadership)</h3>
+                <p>18+ years later, I serve as a Unit Manager. My role has evolved from technical execution to shaping security strategies and ensuring cybersecurity enables the business.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--card);">
+        <div class="grid">
+            <div data-aos="zoom-in">
+                <h3>Professional Skills</h3>
+                Presentation <div class="skill-bar"><div class="skill-fill" style="width: 95%;"></div></div>
+                Organization <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
+                Strategic Leadership <div class="skill-bar"><div class="skill-fill" style="width: 92%;"></div></div>
+            </div>
+            <div data-aos="zoom-in">
+                <h3>Personal Interests</h3>
+                <p><i class="fas fa-fish"></i> Fishing (Patience) | <i class="fas fa-futbol"></i> Football (Teamwork)</p>
+                <p><i class="fas fa-swimmer"></i> Swimming (Endurance) | <i class="fas fa-user-ninja"></i> Kung Fu (Discipline)</p>
+                <p><i class="fas fa-chess"></i> Chess (Strategy)</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h3><i class="fas fa-terminal"></i> Application Terminal: Favorite Project</h3>
+        <div class="terminal" data-aos="flip-up">
+            <p>> Loading Professional_History...</p>
+            <p>> [BEFORE]: Technical execution, identifying basic vulnerabilities.</p>
+            <p>> [AFTER]: Hardening critical national digital services, risk evaluation, and strategic trust.</p>
+            <p>> STATUS: PROTECTED & RELIABLE</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h3 style="text-align: center; margin-bottom: 40px;">Achievement Station</h3>
+        <div class="achievements" data-aos="fade-up">
+            <div class="cert">LDP 13</div><div class="cert">CEH v11</div><div class="cert">CISA</div>
+            <div class="cert">CND</div><div class="cert">Cloud Computing</div><div class="cert">Kubernetes</div>
+            <div class="cert">SOC Analyst</div><div class="cert">IBDL</div><div class="cert">TTT</div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="qr-section" data-aos="zoom-in">
+            <img src="assets/face2.png" alt="Profile" style="width: 150px; border-radius: 50%; border: 4px solid var(--primary); margin-bottom: 20px;">
+            <h2>Let's Connect</h2>
+            <p>Scan to view my professional network</p>
+            <img src="assets/linkedingQR.jfif" alt="LinkedIn QR" style="width: 180px;">
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="src/script.js"></script>
+</body>
+</html>
